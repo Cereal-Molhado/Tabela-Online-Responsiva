@@ -12,7 +12,7 @@ var closeBtns = document.querySelectorAll(".modal-close")
 
 closeBtns.forEach(function(btn){
     btn.onclick = function(){
-        var modal = btn.closest(".modal").style.display = "none";
+        var modal = btn.closest(".modal").style.display = "none"
     }
 })
 
@@ -20,8 +20,8 @@ window.onclick = function(e){
 
     if(e.target.classList.contains('modal')){
 
-        e.target.style.display = 'none';
+        e.target.style.display = "none"
 
     }
 
-};
+}

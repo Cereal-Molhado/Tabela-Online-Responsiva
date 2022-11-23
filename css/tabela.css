@@ -5,10 +5,15 @@
 }
 
 body {
-    background-color: rgb(43,43,43);
+    background-color: rgb(43, 43, 43);
+    padding: 10px 10px;
 }
 
-caption{
+div#container {
+    overflow-x: auto;
+}
+
+caption {
     background: rgb(117, 244, 248);
     width: 996px;
     font-size: 42px;
@@ -21,6 +26,7 @@ table {
     width: 1000px;
     height: 10px;
     border-collapse: collapse;
+    max-width: 786px;
 }
 
 td,
@@ -31,29 +37,29 @@ tr {
     width: 50px;
 }
 
-.specs{
+.specs {
     width: 500px;
 }
 
-.nomeAtributo{
+.nomeAtributo {
     width: 230px;
     height: 51px;
     float: left;
-}  
+}
 
-.numeroAtributo{
+.numeroAtributo {
     width: 270px;
 }
 
-.elementos{
+.elementos {
     width: 400px;
 }
 
-th{
+th {
     float: left;
 }
 
-#naoMetal{
+#naoMetal {
     border: 1px solid #bbff006e;
     color: #b4d264;
     background-color: #bbff006e;
@@ -61,7 +67,7 @@ th{
     outline: none;
 }
 
-#metalAlca{
+#metalAlca {
     border: 1px solid #ffae006e;
     color: #f5c864;
     background-color: #ffae006e;
@@ -69,7 +75,7 @@ th{
     outline: none;
 }
 
-#semiMetal{
+#semiMetal {
     border: 1px solid #00ffe16e;
     color: #6ec8be;
     background-color: #00ffe16e;
@@ -77,7 +83,7 @@ th{
     outline: none;
 }
 
-#outroMetal{
+#outroMetal {
     border: 1px solid #bed2d2b2;
     color: #bed2d2;
     background-color: #bed2d2b2;
@@ -85,7 +91,7 @@ th{
     outline: none;
 }
 
-#lantanideos{
+#lantanideos {
     border: 1px solid #96e1e16e;
     color: #96e1e1;
     background-color: #6ea5a5;
@@ -93,7 +99,7 @@ th{
     outline: none;
 }
 
-#gasNobre{
+#gasNobre {
     border: 1px solid #00a2ff6e;
     color: #64b4e1;
     background-color: #00a2ff6e;
@@ -101,7 +107,7 @@ th{
     outline: none;
 }
 
-#metalAlcaTe{
+#metalAlcaTe {
     border: 1px solid #f0e65a6e;
     color: #f0e65a;
     background-color: #ffee006e;
@@ -109,7 +115,7 @@ th{
     outline: none;
 }
 
-#halogenio{
+#halogenio {
     border: 1px solid #aae1ff6e;
     color: #aae1ff;
     background-color: #42bbfcd5;
@@ -117,7 +123,7 @@ th{
     outline: none;
 }
 
-#metalTrans{
+#metalTrans {
     border: 1px solid #f5afaf6e;
     color: #f5afaf;
     background-color: #ff00006e;
@@ -125,7 +131,7 @@ th{
     outline: none;
 }
 
-#actinidios{
+#actinidios {
     border: 1px solid #e6bedc6e;
     color: #e6bedc;
     background-color: #ff00bf6e;
@@ -133,7 +139,7 @@ th{
     outline: none;
 }
 
-.es{
+.es {
     width: 50px;
     height: 50px;
     border-radius: 4px;
@@ -160,19 +166,26 @@ th{
     z-index: 2;
     display: none;
     animation: modal-open .5s;
+    @media (min-width: 60em) {
+        height:75%;
+         margin:5% auto;
+         max-height: 57em;
+        max-width:66em;
+        width:85%;
+    }
 }
 
 .modal-content {
     background-color: #fff;
     margin-top: 10px;
-    width: 500px;
+    width: 37%;
     height: 580px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 25px;
     border-radius: 4px;
     z-index: 4;
-    overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -256,16 +269,16 @@ th{
     background-color: #ff00bf6e;
 }
 
-.n1-1{
+.n1-1 {
     margin-left: 28px;
 }
 
 .n1-1,
-.n1-4{
+.n1-4 {
     font-size: 20px;
 }
 
-.linha{
+.linha {
     border-top: 1px solid gray;
 }
 
@@ -298,5 +311,36 @@ th{
 
     to {
         opacity: 1;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    div#container {
+        display: flex;
+    }
+
+    .linha{
+        flex-direction: column;
+    }
+
+    .modal-body{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .modal-content {
+        width: 80%;
+        overflow: auto;
+    }
+
+    .nomeAtributo{
+        width: 150px;
+    }
+
+    .numeroAtributo{
+        width: 100px;
     }
 }
