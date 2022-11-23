@@ -7,6 +7,10 @@
 body {
     background-color: rgb(43, 43, 43);
     padding: 10px 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 div#container {
