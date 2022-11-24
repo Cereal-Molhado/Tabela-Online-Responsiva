@@ -356,7 +356,7 @@ th {
     }
     
     .specs{
-        width: 400px;
+        width: 100%;
     }
 
     .modal-close {
