@@ -322,7 +322,11 @@ th {
     .linha {
         flex-direction: row;
     }
-
+    
+    .specs{
+        width:100%;
+    }
+    
     .modal-body {
         display: flex;
         flex-direction: row;
